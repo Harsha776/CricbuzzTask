@@ -1,23 +1,23 @@
 package com.example.cricbuzztask.fragment
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.Observer
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.cricbuzztask.Model.Sneaker
 import com.example.cricbuzztask.R
 import com.example.cricbuzztask.Repository.GetRepository
 import com.example.cricbuzztask.ViewModel.MainViewModel
 import com.example.cricbuzztask.ViewModel.MainViewModelFactory
-import com.example.cricbuzztask.adapter.SneakerAdapter
-import com.example.cricbuzztask.databinding.FragmentPopularSneakerBinding
 import com.example.cricbuzztask.databinding.FragmentSneakerDetailsPageBinding
 
+/**
+ * This class is used for the Selected Sneaker Details
+ */
 class SneakerDetailsPageFragment : Fragment() {
 
     private lateinit var fragmentSneakerDetailsPageBinding: FragmentSneakerDetailsPageBinding
@@ -28,9 +28,9 @@ class SneakerDetailsPageFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        fragmentSneakerDetailsPageBinding= FragmentSneakerDetailsPageBinding.inflate(inflater, container, false)
+    ): View {
+        fragmentSneakerDetailsPageBinding =
+            FragmentSneakerDetailsPageBinding.inflate(inflater, container, false)
         return fragmentSneakerDetailsPageBinding.root
     }
 
@@ -38,68 +38,119 @@ class SneakerDetailsPageFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         getRepository = GetRepository()
         mainViewModelFactory = MainViewModelFactory(getRepository)
-        mainViewModel = ViewModelProvider(requireActivity(),mainViewModelFactory).get(MainViewModel::class.java)
-        mainViewModel.getSneakerDetailsPageData().observe(requireActivity(), Observer {
-            sneakerProduct=it
-         fragmentSneakerDetailsPageBinding.tvBrand.setText(it.brand+" "+it.year)
-            fragmentSneakerDetailsPageBinding.tvName.setText(it.name)
-            fragmentSneakerDetailsPageBinding.tvPriceVal.setText("$ "+it.retailPrice)
-        })
+        mainViewModel =
+            ViewModelProvider(requireActivity(), mainViewModelFactory)[MainViewModel::class.java]
+        mainViewModel.getSneakerDetailsPageData().observe(requireActivity()) {
+            sneakerProduct = it
+            fragmentSneakerDetailsPageBinding.tvBrand.text = it.brand + " " + it.year
+            fragmentSneakerDetailsPageBinding.tvName.text = it.name
+            fragmentSneakerDetailsPageBinding.tvPriceVal.text = "$ " + it.retailPrice
+        }
 
-        mainViewModel.getCartMessgae().observe(requireActivity(), Observer {
-           showToast(it)
-        })
+        mainViewModel.getCartMessgae().observe(requireActivity()) {
+            showToast(it)
+        }
 
-        fragmentSneakerDetailsPageBinding.tvSizeEight.isSelected=true
-        fragmentSneakerDetailsPageBinding.tvSizeEight.setTextColor(resources.getColor(R.color.white))
-        fragmentSneakerDetailsPageBinding.ivOrangeCOlor.isSelected=true
+        fragmentSneakerDetailsPageBinding.tvSizeEight.isSelected = true
+        fragmentSneakerDetailsPageBinding.tvSizeEight.setTextColor(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.white
+            )
+        )
+        fragmentSneakerDetailsPageBinding.ivOrangeCOlor.isSelected = true
 
         clickListner()
     }
 
-    fun clickListner(){
+    fun clickListner() {
         fragmentSneakerDetailsPageBinding.tvSizeSeven.setOnClickListener {
 
-            fragmentSneakerDetailsPageBinding.tvSizeSeven.isSelected=true
-            fragmentSneakerDetailsPageBinding.tvSizeSeven.setTextColor(resources.getColor(R.color.white))
-            fragmentSneakerDetailsPageBinding.tvSizeEight.isSelected=false
-            fragmentSneakerDetailsPageBinding.tvSizeEight.setTextColor(resources.getColor(R.color.orange))
-            fragmentSneakerDetailsPageBinding.tvSizeNine.isSelected=false
-            fragmentSneakerDetailsPageBinding.tvSizeNine.setTextColor(resources.getColor(R.color.orange))
+            fragmentSneakerDetailsPageBinding.tvSizeSeven.isSelected = true
+            fragmentSneakerDetailsPageBinding.tvSizeSeven.setTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.white
+                )
+            )
+            fragmentSneakerDetailsPageBinding.tvSizeEight.isSelected = false
+            fragmentSneakerDetailsPageBinding.tvSizeEight.setTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.orange
+                )
+            )
+            fragmentSneakerDetailsPageBinding.tvSizeNine.isSelected = false
+            fragmentSneakerDetailsPageBinding.tvSizeNine.setTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.orange
+                )
+            )
         }
         fragmentSneakerDetailsPageBinding.tvSizeEight.setOnClickListener {
-            fragmentSneakerDetailsPageBinding.tvSizeSeven.isSelected=false
-            fragmentSneakerDetailsPageBinding.tvSizeSeven.setTextColor(resources.getColor(R.color.orange))
-            fragmentSneakerDetailsPageBinding.tvSizeEight.isSelected=true
-            fragmentSneakerDetailsPageBinding.tvSizeEight.setTextColor(resources.getColor(R.color.white))
-            fragmentSneakerDetailsPageBinding.tvSizeNine.isSelected=false
-            fragmentSneakerDetailsPageBinding.tvSizeNine.setTextColor(resources.getColor(R.color.orange))
+            fragmentSneakerDetailsPageBinding.tvSizeSeven.isSelected = false
+            fragmentSneakerDetailsPageBinding.tvSizeSeven.setTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.orange
+                )
+            )
+            fragmentSneakerDetailsPageBinding.tvSizeEight.isSelected = true
+            fragmentSneakerDetailsPageBinding.tvSizeEight.setTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.white
+                )
+            )
+            fragmentSneakerDetailsPageBinding.tvSizeNine.isSelected = false
+            fragmentSneakerDetailsPageBinding.tvSizeNine.setTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.orange
+                )
+            )
         }
         fragmentSneakerDetailsPageBinding.tvSizeNine.setOnClickListener {
-            fragmentSneakerDetailsPageBinding.tvSizeSeven.isSelected=false
-            fragmentSneakerDetailsPageBinding.tvSizeSeven.setTextColor(resources.getColor(R.color.orange))
-            fragmentSneakerDetailsPageBinding.tvSizeEight.isSelected=false
-            fragmentSneakerDetailsPageBinding.tvSizeEight.setTextColor(resources.getColor(R.color.orange))
-            fragmentSneakerDetailsPageBinding.tvSizeNine.isSelected=true
-            fragmentSneakerDetailsPageBinding.tvSizeNine.setTextColor(resources.getColor(R.color.white))
+            fragmentSneakerDetailsPageBinding.tvSizeSeven.isSelected = false
+            fragmentSneakerDetailsPageBinding.tvSizeSeven.setTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.orange
+                )
+            )
+            fragmentSneakerDetailsPageBinding.tvSizeEight.isSelected = false
+            fragmentSneakerDetailsPageBinding.tvSizeEight.setTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.orange
+                )
+            )
+            fragmentSneakerDetailsPageBinding.tvSizeNine.isSelected = true
+            fragmentSneakerDetailsPageBinding.tvSizeNine.setTextColor(
+                ContextCompat.getColor(
+                    requireContext(),
+                    R.color.white
+                )
+            )
         }
 
         fragmentSneakerDetailsPageBinding.ivOrangeCOlor.setOnClickListener {
-            fragmentSneakerDetailsPageBinding.ivOrangeCOlor.isSelected=true
-            fragmentSneakerDetailsPageBinding.ivPurpleCOlor.isSelected=false
-            fragmentSneakerDetailsPageBinding.ivBlueCOlor.isSelected=false
+            fragmentSneakerDetailsPageBinding.ivOrangeCOlor.isSelected = true
+            fragmentSneakerDetailsPageBinding.ivPurpleCOlor.isSelected = false
+            fragmentSneakerDetailsPageBinding.ivBlueCOlor.isSelected = false
         }
 
         fragmentSneakerDetailsPageBinding.ivPurpleCOlor.setOnClickListener {
-            fragmentSneakerDetailsPageBinding.ivOrangeCOlor.isSelected=false
-            fragmentSneakerDetailsPageBinding.ivPurpleCOlor.isSelected=true
-            fragmentSneakerDetailsPageBinding.ivBlueCOlor.isSelected=false
+            fragmentSneakerDetailsPageBinding.ivOrangeCOlor.isSelected = false
+            fragmentSneakerDetailsPageBinding.ivPurpleCOlor.isSelected = true
+            fragmentSneakerDetailsPageBinding.ivBlueCOlor.isSelected = false
         }
 
         fragmentSneakerDetailsPageBinding.ivBlueCOlor.setOnClickListener {
-            fragmentSneakerDetailsPageBinding.ivOrangeCOlor.isSelected=false
-            fragmentSneakerDetailsPageBinding.ivPurpleCOlor.isSelected=false
-            fragmentSneakerDetailsPageBinding.ivBlueCOlor.isSelected=true
+            fragmentSneakerDetailsPageBinding.ivOrangeCOlor.isSelected = false
+            fragmentSneakerDetailsPageBinding.ivPurpleCOlor.isSelected = false
+            fragmentSneakerDetailsPageBinding.ivBlueCOlor.isSelected = true
         }
 
         fragmentSneakerDetailsPageBinding.ivBack.setOnClickListener {
@@ -122,7 +173,11 @@ class SneakerDetailsPageFragment : Fragment() {
         }
     }
 
-    fun showToast(msg:String){
-        Toast.makeText( fragmentSneakerDetailsPageBinding.tvAddToCart.context,msg,Toast.LENGTH_SHORT).show()
+    private fun showToast(msg: String) {
+        Toast.makeText(
+            fragmentSneakerDetailsPageBinding.tvAddToCart.context,
+            msg,
+            Toast.LENGTH_SHORT
+        ).show()
     }
 }

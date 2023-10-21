@@ -14,6 +14,9 @@ import org.json.JSONException
 import java.io.IOException
 import java.nio.charset.Charset
 
+/**
+ * This is the Main Activity, reading the json file and handling the fragments
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var getRepository: GetRepository
@@ -28,17 +31,17 @@ class MainActivity : AppCompatActivity() {
         init()
     }
 
-    fun init(){
+    fun init() {
         getRepository = GetRepository()
-       mainViewModelFactory = MainViewModelFactory(getRepository)
-        mainViewModel = ViewModelProvider(this,mainViewModelFactory).get(MainViewModel::class.java)
+        mainViewModelFactory = MainViewModelFactory(getRepository)
+        mainViewModel = ViewModelProvider(this, mainViewModelFactory).get(MainViewModel::class.java)
         readJson()
     }
 
-    fun readJson(){
+    fun readJson() {
         try {
-            val jsonData=Gson().fromJson(loadJSONFromAsset(), SneakerDetails::class.java)
-            Log.d("TAG", "readJson: "+jsonData.sneakerDetails.size)
+            val jsonData = Gson().fromJson(loadJSONFromAsset(), SneakerDetails::class.java)
+            Log.d("TAG", "readJson: " + jsonData.sneakerDetails.size)
             mainViewModel.setData(jsonData.sneakerDetails)
         } catch (e: JSONException) {
             e.printStackTrace()

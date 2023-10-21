@@ -7,14 +7,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 class RetrofitBuilder {
-    companion object{
+    companion object {
 
         private val intercepter = HttpLoggingInterceptor().apply {
             this.level = HttpLoggingInterceptor.Level.BODY
         }
         private val client = OkHttpClient.Builder().apply {
             this.addInterceptor(intercepter)
-                // time out setting
                 .connectTimeout(3, TimeUnit.SECONDS)
                 .readTimeout(20, TimeUnit.SECONDS)
                 .writeTimeout(25, TimeUnit.SECONDS)
@@ -28,7 +27,7 @@ class RetrofitBuilder {
                 .build()
         }
 
-        val api:Api by lazy {
+        val api: Api by lazy {
             retrofit.create(Api::class.java)
         }
     }
