@@ -6,12 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cricbuzztask.Model.Sneaker
 import com.example.cricbuzztask.R
 
-class SneakerAdapter: RecyclerView.Adapter<SneakerAdapter.SneakerViewHolder>() {
+class SneakerAdapter(private val onClick:(String)->Unit): RecyclerView.Adapter<SneakerAdapter.SneakerViewHolder>() {
 
     private val data:ArrayList<Sneaker> = ArrayList()
     override fun onCreateViewHolder(
@@ -32,6 +33,9 @@ class SneakerAdapter: RecyclerView.Adapter<SneakerAdapter.SneakerViewHolder>() {
         Glide.with(holder.tvSneakerName.context)
             .load(R.drawable.ic_launcher_foreground)
             .into(holder.ivSneakerImage)
+        holder.cvMain.setOnClickListener {
+            onClick(data.get(position).id)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -49,5 +53,6 @@ class SneakerAdapter: RecyclerView.Adapter<SneakerAdapter.SneakerViewHolder>() {
         val tvSneakerName: TextView =itemView.findViewById(R.id.tvSneakerName)
         val tvPrice: TextView =itemView.findViewById(R.id.tvPrice)
         val ivSneakerImage : ImageView = itemView.findViewById(R.id.ivSneakerImage)
+        val cvMain:CardView= itemView.findViewById(R.id.cvMain)
     }
 }

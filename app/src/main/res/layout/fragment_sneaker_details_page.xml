@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context=".fragment.SneakerDetailsPageFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/back_icon"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivDress"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="160dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground"/>
+
+    <ImageView
+        android:id="@+id/ivSneakerBG"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/ivDress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/bottom_curve"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBrand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="Popular"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDress" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:text="Popular"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBrand" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="Size (uk) :"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSizeSeven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="7"
+        android:background="@drawable/background_edit_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tvSize"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSizeEight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="8"
+        android:focusable="true"
+        android:background="@drawable/background_edit_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tvSizeSeven"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSizeNine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="9"
+        android:background="@drawable/background_edit_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tvSizeEight"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Colour :"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ivOrangeCOlor"
+        app:layout_constraintTop_toTopOf="@+id/ivOrangeCOlor" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ivOrangeCOlor"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/orange_colour_bg"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/tvSize"
+        app:layout_constraintTop_toBottomOf="@+id/tvSizeSeven" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ivPurpleCOlor"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/purple_colour_bg"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivOrangeCOlor"
+        app:layout_constraintTop_toBottomOf="@+id/tvSizeSeven" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ivBlueCOlor"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/blue_colour_bg"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivPurpleCOlor"
+        app:layout_constraintTop_toBottomOf="@+id/tvSizeSeven" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:text="Price :"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAddToCart"
+        app:layout_constraintTop_toTopOf="@+id/tvAddToCart" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPriceVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="$129"
+        android:textColor="#eb8e3d"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvPrice"
+        app:layout_constraintTop_toTopOf="@id/tvPrice" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAddToCart"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:text="Add to Cart"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/orange_bg"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPurpleCOlor" />
+
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/bottom_curve"
+        />
+
+    <ImageView
+        android:src="@drawable/circle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/home_icon"/>
+
+
+    <ImageView
+        android:id="@+id/ivCheckOut"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/cart_icon"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
