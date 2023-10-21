@@ -1,0 +1,184 @@
+{
+"sneakerDetails": [
+{
+"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+"brand": "Zyke",
+"colorway": "red",
+"gender": "male",
+"media": {
+"imageUrl": "https:\\url",
+"smallImageUrl": "string",
+"thumbUrl": "string"
+},
+"releaseDate": "2022-12-15",
+"retailPrice": 499,
+"styleId": "123",
+"shoe": "string",
+"name": "men's cotton tee",
+"title": "string",
+"year": 2012
+},
+{
+"id": "2c963f66-5717-4562-b3fc-2c963f66afa6",
+"brand": "Lymio",
+"colorway": "yellow",
+"gender": "male",
+"media": {
+"imageUrl": "string",
+"smallImageUrl": "string",
+"thumbUrl": "string"
+},
+"releaseDate": "2024-01-15",
+"retailPrice": 399,
+"styleId": "132",
+"shoe": "string",
+"name": "Polo Shirt",
+"title": "string",
+"year": 2023
+},
+  {
+    "id": "ghfgnbdf-5717-4562-b3fc-2c963f66afa6",
+    "brand": "Boss",
+    "colorway": "red",
+    "gender": "male",
+    "media": {
+      "imageUrl": "https:\\url",
+      "smallImageUrl": "string",
+      "thumbUrl": "string"
+    },
+    "releaseDate": "2022-12-15",
+    "retailPrice": 1499,
+    "styleId": "123",
+    "shoe": "string",
+    "name": "Striped Shirt",
+    "title": "string",
+    "year": 2012
+  },
+  {
+    "id": "knhjkbm-5717-4562-b3fc-2c963f66afa6",
+    "brand": "Kenzo",
+    "colorway": "red",
+    "gender": "male",
+    "media": {
+      "imageUrl": "https:\\url",
+      "smallImageUrl": "string",
+      "thumbUrl": "string"
+    },
+    "releaseDate": "2020-12-15",
+    "retailPrice": 2299,
+    "styleId": "124",
+    "shoe": "string",
+    "name": "Tiger crest cotton",
+    "title": "string",
+    "year": 2012
+  },
+  {
+    "id": "mnjkb-5717-4562-b3fc-2c963f66afa6",
+    "brand": "Paul",
+    "colorway": "red",
+    "gender": "male",
+    "media": {
+      "imageUrl": "https:\\url",
+      "smallImageUrl": "string",
+      "thumbUrl": "string"
+    },
+    "releaseDate": "2022-12-15",
+    "retailPrice": 4299,
+    "styleId": "123",
+    "shoe": "string",
+    "name": "Organic cotton",
+    "title": "string",
+    "year": 2012
+  },
+  {
+    "id": "3fa8rgnbrgdf5f64-5717-4562-b3fc-2c963f66afa6",
+    "brand": "Diedel",
+    "colorway": "red",
+    "gender": "male",
+    "media": {
+      "imageUrl": "https:\\url",
+      "smallImageUrl": "string",
+      "thumbUrl": "string"
+    },
+    "releaseDate": "2022-12-15",
+    "retailPrice": 699,
+    "styleId": "123",
+    "shoe": "string",
+    "name": "S-LOOMY Boxy Fit Shirt",
+    "title": "string",
+    "year": 2012
+  },
+  {
+    "id": "bnjhrfbetrgsfbjbn-5717-4562-b3fc-2c963f66afa6",
+    "brand": "PAUL",
+    "colorway": "yellow",
+    "gender": "male",
+    "media": {
+      "imageUrl": "string",
+      "smallImageUrl": "string",
+      "thumbUrl": "string"
+    },
+    "releaseDate": "2024-01-15",
+    "retailPrice": 3299,
+    "styleId": "132",
+    "shoe": "string",
+    "name": "Organic cotton Poplin",
+    "title": "string",
+    "year": 2023
+  },
+  {
+    "id": "3faretr85f64-5717-4562-b3fc-2c963f66afa6",
+    "brand": "GIORGIO ARMANI",
+    "colorway": "red",
+    "gender": "male",
+    "media": {
+      "imageUrl": "https:\\url",
+      "smallImageUrl": "string",
+      "thumbUrl": "string"
+    },
+    "releaseDate": "2022-12-15",
+    "retailPrice": 2499,
+    "styleId": "123",
+    "shoe": "string",
+    "name": "Full sleeves Slim Fit",
+    "title": "string",
+    "year": 2012
+  },
+  {
+    "id": "jkrgbrgbdfhkj-5717-4562-b3fc-2c963f66afa6",
+    "brand": "PS PAUL",
+    "colorway": "red",
+    "gender": "male",
+    "media": {
+      "imageUrl": "https:\\url",
+      "smallImageUrl": "string",
+      "thumbUrl": "string"
+    },
+    "releaseDate": "2020-12-15",
+    "retailPrice": 299,
+    "styleId": "124",
+    "shoe": "string",
+    "name": "Printed Shirt",
+    "title": "string",
+    "year": 2012
+  },
+  {
+    "id": "brtef-5717-4562-b3fc-2c963f66afa6",
+    "brand": "Replay",
+    "colorway": "red",
+    "gender": "male",
+    "media": {
+      "imageUrl": "https:\\url",
+      "smallImageUrl": "string",
+      "thumbUrl": "string"
+    },
+    "releaseDate": "2022-12-15",
+    "retailPrice": 5299,
+    "styleId": "123",
+    "shoe": "string",
+    "name": "SARTORIAKLE INDIGO Light",
+    "title": "string",
+    "year": 2012
+  }
+]
+}
