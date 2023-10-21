@@ -2,7 +2,7 @@
 "sneakerDetails": [
 {
 "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-"brand": "Zyke",
+"brand": "Bacca Bucci",
 "colorway": "red",
 "gender": "male",
 "media": {
@@ -14,13 +14,13 @@
 "retailPrice": 499,
 "styleId": "123",
 "shoe": "string",
-"name": "men's cotton tee",
+"name": "Mens Sneaker",
 "title": "string",
 "year": 2012
 },
 {
 "id": "2c963f66-5717-4562-b3fc-2c963f66afa6",
-"brand": "Lymio",
+"brand": "Sparx",
 "colorway": "yellow",
 "gender": "male",
 "media": {
@@ -32,13 +32,13 @@
 "retailPrice": 399,
 "styleId": "132",
 "shoe": "string",
-"name": "Polo Shirt",
+"name": "Mens sd9039g Sneakers",
 "title": "string",
 "year": 2023
 },
   {
     "id": "ghfgnbdf-5717-4562-b3fc-2c963f66afa6",
-    "brand": "Boss",
+    "brand": "ASIAN",
     "colorway": "red",
     "gender": "male",
     "media": {
@@ -50,13 +50,13 @@
     "retailPrice": 1499,
     "styleId": "123",
     "shoe": "string",
-    "name": "Striped Shirt",
+    "name": "Mens Thunder",
     "title": "string",
     "year": 2012
   },
   {
     "id": "knhjkbm-5717-4562-b3fc-2c963f66afa6",
-    "brand": "Kenzo",
+    "brand": "Red Tape",
     "colorway": "red",
     "gender": "male",
     "media": {
@@ -68,13 +68,13 @@
     "retailPrice": 2299,
     "styleId": "124",
     "shoe": "string",
-    "name": "Tiger crest cotton",
+    "name": "Casual sneaker",
     "title": "string",
     "year": 2012
   },
   {
     "id": "mnjkb-5717-4562-b3fc-2c963f66afa6",
-    "brand": "Paul",
+    "brand": "Puma",
     "colorway": "red",
     "gender": "male",
     "media": {
@@ -86,13 +86,13 @@
     "retailPrice": 4299,
     "styleId": "123",
     "shoe": "string",
-    "name": "Organic cotton",
+    "name": "Unisex-Adult Rebound layup Sl",
     "title": "string",
     "year": 2012
   },
   {
     "id": "3fa8rgnbrgdf5f64-5717-4562-b3fc-2c963f66afa6",
-    "brand": "Diedel",
+    "brand": "US POLO ASSn",
     "colorway": "red",
     "gender": "male",
     "media": {
@@ -104,13 +104,13 @@
     "retailPrice": 699,
     "styleId": "123",
     "shoe": "string",
-    "name": "S-LOOMY Boxy Fit Shirt",
+    "name": "Mens Abor Sneakers",
     "title": "string",
     "year": 2012
   },
   {
     "id": "bnjhrfbetrgsfbjbn-5717-4562-b3fc-2c963f66afa6",
-    "brand": "PAUL",
+    "brand": "Cruiser",
     "colorway": "yellow",
     "gender": "male",
     "media": {
@@ -122,13 +122,13 @@
     "retailPrice": 3299,
     "styleId": "132",
     "shoe": "string",
-    "name": "Organic cotton Poplin",
+    "name": "Mens Augustus sneakers",
     "title": "string",
     "year": 2023
   },
   {
     "id": "3faretr85f64-5717-4562-b3fc-2c963f66afa6",
-    "brand": "GIORGIO ARMANI",
+    "brand": "AADI",
     "colorway": "red",
     "gender": "male",
     "media": {
@@ -140,13 +140,13 @@
     "retailPrice": 2499,
     "styleId": "123",
     "shoe": "string",
-    "name": "Full sleeves Slim Fit",
+    "name": "mens synthetic leather outdoor casual shoes",
     "title": "string",
     "year": 2012
   },
   {
     "id": "jkrgbrgbdfhkj-5717-4562-b3fc-2c963f66afa6",
-    "brand": "PS PAUL",
+    "brand": "Layasa",
     "colorway": "red",
     "gender": "male",
     "media": {
@@ -158,13 +158,13 @@
     "retailPrice": 299,
     "styleId": "124",
     "shoe": "string",
-    "name": "Printed Shirt",
+    "name": "Comfotable lightweight casual lace-up",
     "title": "string",
     "year": 2012
   },
   {
     "id": "brtef-5717-4562-b3fc-2c963f66afa6",
-    "brand": "Replay",
+    "brand": "SOLETHREADS",
     "colorway": "red",
     "gender": "male",
     "media": {
@@ -176,7 +176,7 @@
     "retailPrice": 5299,
     "styleId": "123",
     "shoe": "string",
-    "name": "SARTORIAKLE INDIGO Light",
+    "name": "Pinnacle | mens casual sneakers",
     "title": "string",
     "year": 2012
   }

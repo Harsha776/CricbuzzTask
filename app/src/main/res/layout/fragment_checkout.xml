@@ -1,108 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:focusable="true"
     android:clickable="true"
+    android:focusable="true"
     tools:context=".fragment.CheckoutFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivBack"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="@dimen/fourtyDp"
+        android:layout_height="@dimen/fourtyDp"
+        android:layout_marginStart="@dimen/thirtyDp"
+        android:layout_marginTop="@dimen/fiftyDp"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/back_icon"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:text="Cart"
-        android:textColor="#eb8e3d"
-        android:textSize="24sp"
+        android:layout_marginStart="@dimen/thirtyDp"
+        android:layout_marginTop="@dimen/fiftyDp"
+        android:text="@string/cart"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/twentyFourSp"
         app:fontFamily="sans-serif-black"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCheckOut"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/zeroDP"
+        android:layout_marginStart="@dimen/thirtyDp"
         android:layout_marginTop="15dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        tools:listitem="@layout/adapter_checkout"
+        android:layout_marginEnd="@dimen/thirtyDp"
+        app:layout_constraintBottom_toTopOf="@+id/tvOrderDetails"
         app:layout_constraintTop_toBottomOf="@+id/ivBack"
-        app:layout_constraintBottom_toTopOf="@+id/tvOrderDetails"/>
+        tools:listitem="@layout/adapter_checkout" />
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvOrderDetails"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zeroDP"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginEnd="30dp"
-        android:text="Order details"
-        android:textColor="#000000"
+        android:layout_marginStart="@dimen/thirtyDp"
+        android:layout_marginEnd="@dimen/thirtyDp"
+        android:layout_marginBottom="@dimen/tenDp"
+        android:text="@string/orderDetails"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintBottom_toTopOf="@+id/tvSubTotal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tvSubTotal" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSubTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="Subtotal : $40"
+        android:layout_marginStart="@dimen/thirtyDp"
+        android:layout_marginEnd="@dimen/thirtyDp"
+        android:layout_marginBottom="@dimen/tenDp"
         android:textSize="18sp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tvTax" />
+        app:layout_constraintBottom_toTopOf="@+id/tvTax"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvTax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="Taxes and Charges: $40"
+        android:layout_marginStart="@dimen/thirtyDp"
+        android:layout_marginEnd="@dimen/thirtyDp"
+        android:layout_marginBottom="@dimen/thirtyDp"
         android:textSize="18sp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/tvCheckOut" />
+        app:layout_constraintBottom_toTopOf="@+id/tvCheckOut"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="Price :"
+        android:layout_marginStart="@dimen/thirtyDp"
+        android:layout_marginEnd="@dimen/thirtyDp"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@+id/tvCheckOut"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvCheckOut" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvPriceVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="$129"
-        android:textColor="#eb8e3d"
+        android:layout_marginStart="@dimen/fiveDp"
+        android:textColor="@color/orange"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/tvPrice"
         app:layout_constraintTop_toTopOf="@id/tvPrice" />
@@ -111,57 +107,56 @@
         android:id="@+id/tvCheckOut"
         android:layout_width="140dp"
         android:layout_height="60dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="@dimen/thirtyDp"
         android:layout_marginEnd="60dp"
-        android:text="Check Out"
-        android:textColor="@color/white"
-        android:textAlignment="center"
-        android:gravity="center"
+        android:layout_marginBottom="@dimen/fourtyDp"
         android:background="@drawable/orange_bg"
+        android:gravity="center"
+        android:text="@string/checkOut"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/img_background" />
+        app:layout_constraintBottom_toTopOf="@+id/img_background"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/img_background"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="@dimen/eightyDp"
         android:src="@drawable/bottom_curve"
-        />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <ImageView
-        android:src="@drawable/circle"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginEnd="@dimen/fourtyDp"
         android:layout_marginBottom="15dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:src="@drawable/circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/ivHome"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="@dimen/fourtyDp"
+        android:layout_height="@dimen/fourtyDp"
         android:layout_centerHorizontal="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/home_icon"
         android:tint="@color/orange"
-        android:src="@drawable/home_icon"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="@dimen/fourtyDp"
+        android:layout_height="@dimen/fourtyDp"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/fiftyDp"
+        android:layout_marginBottom="@dimen/twentyDp"
         android:src="@drawable/cart_icon"
-        android:tint="@color/white"/>
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,20 +5,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.cricbuzztask.Model.Sneaker
 import com.example.cricbuzztask.R
-class CheckOutAdapter(private val onClick:(String)->Unit): RecyclerView.Adapter<CheckOutAdapter.CheckOutViewHolder>() {
 
-    private val data:ArrayList<Sneaker> = ArrayList()
+/**
+ * Checkout Adapter class is used to show all the selected cart items
+ */
+class CheckOutAdapter(private val onClick: (String) -> Unit) :
+    RecyclerView.Adapter<CheckOutAdapter.CheckOutViewHolder>() {
+
+    private val data: ArrayList<Sneaker> = ArrayList()
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ):CheckOutViewHolder {
-        // inflates the card_view_design view
-        // that is used to hold list item
+    ): CheckOutViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.adapter_checkout, parent, false)
 
@@ -26,10 +27,10 @@ class CheckOutAdapter(private val onClick:(String)->Unit): RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: CheckOutViewHolder, position: Int) {
-        holder.tvSneakerName.setText(data.get(position).name)
-        holder.tvPrice.setText("$ "+data.get(position).retailPrice)
+        holder.tvSneakerName.text = data[position].name
+        holder.tvPrice.text = "$ " + data[position].retailPrice
         holder.ivCancel.setOnClickListener {
-            onClick(data.get(position).id)
+            onClick(data[position].id)
         }
     }
 
@@ -37,16 +38,15 @@ class CheckOutAdapter(private val onClick:(String)->Unit): RecyclerView.Adapter<
         return data.size
     }
 
-    fun setData(data:ArrayList<Sneaker>){
+    fun setData(data: ArrayList<Sneaker>) {
         this.data.clear()
         this.data.addAll(data)
         notifyDataSetChanged()
     }
 
-    class CheckOutViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-    {
-        val tvSneakerName: TextView =itemView.findViewById(R.id.tvSneakerName)
-        val tvPrice: TextView =itemView.findViewById(R.id.tvPrice)
-        val ivCancel : ImageView = itemView.findViewById(R.id.ivCancel)
+    class CheckOutViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val tvSneakerName: TextView = itemView.findViewById(R.id.tvSneakerName)
+        val tvPrice: TextView = itemView.findViewById(R.id.tvPrice)
+        val ivCancel: ImageView = itemView.findViewById(R.id.ivCancel)
     }
 }

@@ -2,4 +2,21 @@
     <string name="app_name">CricbuzzTask</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="subTotal">Subtotal :$ </string>
+    <string name="tax">Taxes and Charges: $40</string>
+    <string name="taxWithZero">Taxes and Charges: $0</string>
+    <string name="enterSearchProduct">Enter Search Product</string>
+    <string name="search">Search</string>
+    <string name="close">Close</string>
+    <string name="cart">Cart</string>
+    <string name="orderDetails">Order details</string>
+    <string name="checkOut">Check Out</string>
+    <string name="sneakerShip">SNEAKERSHIP</string>
+    <string name="sortBy">Sort by</string>
+    <string name="addToCart">Add to Cart</string>
+    <string name="price">Price :</string>
+    <string name="colour">Colour :</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
 </resources>
